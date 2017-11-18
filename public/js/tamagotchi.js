@@ -25,7 +25,7 @@ $(function() {
     event.preventDefault();
 
     var newAction = {
-      action_name: $("#ca").val().trim(),
+      action_name: $("#ac").val().trim(),
       completed: $("[name=complete]:checked").val().trim()
     };
 
