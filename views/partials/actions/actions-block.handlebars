@@ -1,0 +1,12 @@
+<li class="list-group-item d-flex flex-row justify-content-between align-items-center">
+	<p class="description">
+		{{description}}
+	</p>
+
+	{{#unless completed}}
+		<button class="btn set-actions btn-outline-warning" id="set-actions" data-id="{{id}}">
+			Complete
+		</button>
+	{{/unless}}
+
+</li>

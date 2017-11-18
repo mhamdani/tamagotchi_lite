@@ -1,37 +1,54 @@
-<h1>Play with your Tamagotchi!</h1>
 
-<h2>Actions to complete:</h2>
+<div class="jumbotron jumbotron-fluid" id="header">
+  <div class="container">
+    <h3 class="display-5">Play with your Tamagotchi!</h3>
 
-<ul>
-  {{#each actions}}
-    {{#unless complete}}
-      {{> actions/action-block completed=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>Completed actions:</h2>
-<ul>
-  {{#each actions}}
-    {{#if completed}}
-      {{> actions/action-block completed=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="row justify-content-center align-items-end">
+      <div class="col-md-4">
+        <form class="create-action" action="/api/actions/" method="post">
+          <textarea class="form-control" id="value" name="value" rows="1" required placeholder="Add an action"></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary">Add Action</button>
+      </div>
+        </form>
+    </div>
 
-<h2>Add an action!</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ac">Action:</label>
-    <input type="text" id="ac" name="action_name">
   </div>
+</div>
 
-  <!-- <div class="form-group">
-    <label for="slee">Completed?</label><br>
-    <input type="radio" name="completed" value="1" checked> Completed!<br>
-    <input type="radio" name="completed" value="0"> Done
-  </div> -->
+<div class="container">
+  <div class="row justify-content-around">
 
-  <p><button type="submit">Add Action</button>
-</form></p>
+    <div class="col-md-5">
+      <h3>Actions that need to be completed:</h3>
+      <ul class="list-group">
+        {{#each actions}}
+        {{#unless completed}}
+        {{> actions/actions-block}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-5">
+      <p><h3>Completed actions:</h3></p>
+      <ul class="list-group">
+        {{#each actions}}
+        {{#if completed}}
+        {{> actions/actions-block}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </div> <!-- End Row -->
+</div>
+
+<footer class="" id="footer">
+  <div class="container">
+    <br><h9><p>Made by Michelle Hamdani</p></h9>
+  </div>
+</footer>
