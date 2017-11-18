@@ -1,0 +1,37 @@
+<h1>Play with your Tamagotchi!</h1>
+
+<h2>Actions to complete:</h2>
+
+<ul>
+  {{#each actions}}
+    {{#unless complete}}
+      {{> actions/action-block completed=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Completed actions:</h2>
+<ul>
+  {{#each actions}}
+    {{#if completed}}
+      {{> actions/action-block completed=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add an action!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Action:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="slee">Completed?</label><br>
+    <input type="radio" name="completed" value="1" checked> Completed!<br>
+    <input type="radio" name="completed" value="0"> Done
+  </div> -->
+
+  <p><button type="submit">Add Action</button>
+</form></p>

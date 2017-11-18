@@ -1,0 +1,38 @@
+{
+  "name": "tamagotchi_lite",
+  "version": "1.0.0",
+  "description": "Use MVC design pattern to create a Tamagotchi logger with MySQL, Node, Express, Handlebars and a homemade ORM. Use of Node and MySQL to query and route data in app, and Handlebars to generate HTML. Edit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhamdani/tamagotchi_lite.git"
+  },
+  "keywords": [
+    "tamagotchi",
+    "MVC",
+    "Express",
+    "Node",
+    "Handlebars",
+    "ORM",
+    "MySQL",
+    "query",
+    "logger"
+  ],
+  "author": "mhamdani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhamdani/tamagotchi_lite/issues"
+  },
+  "homepage": "https://github.com/mhamdani/tamagotchi_lite#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
+}
