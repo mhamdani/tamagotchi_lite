@@ -1,15 +1,15 @@
 (function(){
 
-var actBtns = $('#set-actions');
+var actBtns = $(".set-actions");
 
 function completeAct(event) {
-  $("input").prop('disabled', true);
+  $(this).attr("disabled", "disabled");
 
   const id = this.dataset.id;
 
   var request = { id: id, column: 'completed', value: true };
 
-  $.ajax('/api/actions/:' + id, {
+  $.ajax('/api/actions/' + id, {
     type: "PUT",
     data: request
   }).then(
