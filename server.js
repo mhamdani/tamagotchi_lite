@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-var port = 3000;
+var port = 3306;
 
 var app = express();
 
