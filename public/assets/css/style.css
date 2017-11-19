@@ -20,3 +20,7 @@ button {
   width: 30%;
   margin-left: 40px;
 }
+
+.jumbotron {
+  background-image: url(/assets/img/backsky.jpg);
+}
