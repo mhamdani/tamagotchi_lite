@@ -15,3 +15,8 @@ button {
   font-size: 10px;
   font-weight: lighter;
 }
+
+.tama_img {
+  width: 30%;
+  margin-left: 40px;
+}
