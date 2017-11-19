@@ -29,3 +29,16 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.set-actions {
+  color: hotpink;
+  border-color: #ff99cc;
+}
+
+.set-actions:hover {
+  background-color: #99ccff;
+  border-color: #99ccff;
+}
+/*.btn-outline-warning {
+  border-color: #ff99cc;
+}*/
